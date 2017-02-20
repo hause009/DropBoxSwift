@@ -1,26 +1,211 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="igM-jr-gfs">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--DropBox-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DropBoxSwift" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F4A-2v-Rxq" customClass="Button" customModule="DropBoxSwift" customModuleProvider="target">
+                                <rect key="frame" x="88" y="127" width="144" height="52"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="Hay-z1-kvQ"/>
+                                    <constraint firstAttribute="width" constant="144" id="xQG-U9-v5y"/>
+                                </constraints>
+                                <state key="normal" title="Authorization"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="clickAuthorization:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2kd-mu-zGd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w9t-xq-xSB" customClass="Button" customModule="DropBoxSwift" customModuleProvider="target">
+                                <rect key="frame" x="88" y="227" width="144" height="52"/>
+                                <color key="backgroundColor" red="0.50196081400000003" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="52" id="j2n-Zy-16j"/>
+                                    <constraint firstAttribute="width" constant="144" id="wPf-93-sY2"/>
+                                </constraints>
+                                <state key="normal" title="Root Folder"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="getRootFolder:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bZX-1p-iUM"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="w9t-xq-xSB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="2ua-tj-muD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="F4A-2v-Rxq" secondAttribute="trailing" constant="72" id="4ky-OQ-rBB"/>
+                            <constraint firstItem="w9t-xq-xSB" firstAttribute="top" secondItem="F4A-2v-Rxq" secondAttribute="bottom" constant="48" id="QqA-3E-urL"/>
+                            <constraint firstItem="F4A-2v-Rxq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="72" id="ghe-AL-nIR"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="w9t-xq-xSB" secondAttribute="trailing" constant="72" id="rtL-ln-UzG"/>
+                            <constraint firstItem="F4A-2v-Rxq" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="63" id="zWP-AC-BWk"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="DropBox" id="2P9-y3-882"/>
+                    <connections>
+                        <segue destination="31S-rC-nvh" kind="show" identifier="SegueToFolder" id="wCv-Dc-q1E"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="972" y="38.23088455772114"/>
+        </scene>
+        <!--Table Controller-->
+        <scene sceneID="XSQ-KY-CD2">
+            <objects>
+                <viewController id="31S-rC-nvh" customClass="TableController" customModule="DropBoxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cCd-a7-Zu9"/>
+                        <viewControllerLayoutGuide type="bottom" id="dnp-Rp-6My"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LKK-9S-Wdb">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="42" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="5Gx-2f-gVE">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="42" id="Ebe-hz-feI">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="42"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ebe-hz-feI" id="W9q-xF-SFX">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="41"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="31S-rC-nvh" id="k7D-N3-6po"/>
+                                    <outlet property="delegate" destination="31S-rC-nvh" id="dcQ-MB-ube"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5Gx-2f-gVE" firstAttribute="leading" secondItem="LKK-9S-Wdb" secondAttribute="leadingMargin" constant="-16" id="1PC-7d-5RN"/>
+                            <constraint firstItem="dnp-Rp-6My" firstAttribute="top" secondItem="5Gx-2f-gVE" secondAttribute="bottom" id="JvR-sF-iQ8"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="5Gx-2f-gVE" secondAttribute="trailing" constant="-16" id="Zdj-vj-ETR"/>
+                            <constraint firstItem="5Gx-2f-gVE" firstAttribute="top" secondItem="cCd-a7-Zu9" secondAttribute="bottom" id="rKB-Jr-dx1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Foa-3N-0no"/>
+                    <connections>
+                        <segue destination="fg4-dc-k2f" kind="show" identifier="SegueToFolder2" id="8CL-78-9Y9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uoK-5U-gKL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1829.5999999999999" y="37.331334332833585"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="AbM-OO-VEN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="igM-jr-gfs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lnH-7k-taf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="4rS-x7-OPy"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EK2-CD-Stt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="38.23088455772114"/>
+        </scene>
+        <!--Folder Controller-->
+        <scene sceneID="ycn-9o-SaI">
+            <objects>
+                <viewController id="fg4-dc-k2f" customClass="FolderController" customModule="DropBoxSwift" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="cc8-ez-U1h"/>
+                        <viewControllerLayoutGuide type="bottom" id="nu8-Ji-MdR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mdK-Rr-kYz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vgk-7d-dvD">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="nuz-NM-vDr">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nuz-NM-vDr" id="ggt-l0-OFh">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <sections/>
+                                <connections>
+                                    <outlet property="dataSource" destination="fg4-dc-k2f" id="Cu6-ZQ-4dP"/>
+                                    <outlet property="delegate" destination="fg4-dc-k2f" id="6ZP-y7-wNy"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="nu8-Ji-MdR" firstAttribute="top" secondItem="vgk-7d-dvD" secondAttribute="bottom" id="0b7-B8-CyK"/>
+                            <constraint firstItem="vgk-7d-dvD" firstAttribute="top" secondItem="cc8-ez-U1h" secondAttribute="bottom" id="fnD-Qe-Jot"/>
+                            <constraint firstItem="vgk-7d-dvD" firstAttribute="leading" secondItem="mdK-Rr-kYz" secondAttribute="leadingMargin" constant="-16" id="pBx-dg-rxU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="vgk-7d-dvD" secondAttribute="trailing" constant="-16" id="sxW-Us-sdp"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="sg8-5B-Uui"/>
+                    <connections>
+                        <segue destination="31S-rC-nvh" kind="show" identifier="SegueToFolder3" id="ouT-Lz-pMh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DBS-cJ-rwa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2980" y="38"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="wCv-Dc-q1E"/>
+    </inferredMetricsTieBreakers>
 </document>
