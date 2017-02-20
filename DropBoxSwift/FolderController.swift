@@ -12,6 +12,7 @@ import SwiftyDropbox
 class FolderController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     var resultArray = Array<Files.Metadata>()
+    var resultArraySave = Array<Files.Metadata>()
     var titleFolder = ""
     
     override func viewDidLoad() {
@@ -30,41 +31,55 @@ class FolderController: UIViewController,UITableViewDelegate,UITableViewDataSour
         let cell = UITableViewCell(style: .subtitle, reuseIdentifier: "ElementCell")
         let dict = resultArray[indexPath.row]
         
+        let file = dict as? Files.FileMetadata
+        var stringFormat = ""
         
-        cell.textLabel?.text = dict.name
-        
-        if let file = dict as? Files.FileMetadata {
-            print("This is a file with path: \(file.pathLower)")
+        //if let file = dict as? Files.FileMetadata
+        if  (file != nil)
+        {
+            print("This is a file with path: \(file?.pathLower)")
             
-            if file.name.hasSuffix(".txt") {
+            if (file?.name.hasSuffix(".txt"))! {
                 
-                cell.detailTextLabel?.text = "txt"
+                stringFormat = "txt"
                 
-            } else if file.name.hasSuffix(".zip") {
+            } else if (file?.name.hasSuffix(".zip"))! {
                 
-                cell.detailTextLabel?.text = "zip"
-                
-            }
-            else if file.name.hasSuffix(".jpg") {
-                
-                cell.detailTextLabel?.text = "jpg"
+                stringFormat = "zip"
                 
             }
-            else if file.name.hasSuffix(".psd") {
+            else if (file?.name.hasSuffix(".jpg"))! {
                 
-                cell.detailTextLabel?.text = "psd"
+                stringFormat = "jpg"
+                
+            }
+            else if (file?.name.hasSuffix(".psd"))! {
+                
+                stringFormat = "psd"
                 
             }
             else
             {
                 
-                cell.detailTextLabel?.text = "Folder"
+                stringFormat = "Unknown type"
                 
             }
         }
         else{
-            cell.detailTextLabel?.text = "Folder"
+            stringFormat = "Folder"
             
+        }
+        
+        cell.textLabel?.text = dict.name
+        let stringModified  = String(describing: file?.clientModified)
+        
+       if (stringModified != "nil"){
+            
+            cell.detailTextLabel?.text = stringFormat + " modified - " + stringModified //"\(file?.clientModified)"
+        }
+        else
+        {
+            cell.detailTextLabel?.text = stringFormat
         }
         
         return cell
@@ -89,11 +104,10 @@ class FolderController: UIViewController,UITableViewDelegate,UITableViewDataSour
             if let result = response {
                 print(result)
                 
-                self.resultArray = result.entries
-                if result.entries.count != 0
-                {
+                self.resultArraySave = result.entries
+
                 self.performSegue(withIdentifier: "SegueToFolder3", sender: self)
-                }
+
             }
         }
         
@@ -104,7 +118,7 @@ class FolderController: UIViewController,UITableViewDelegate,UITableViewDataSour
         {
             let vc = segue.destination as! TableController
             vc.title = titleFolder
-            vc.resultArray = resultArray
+            vc.resultArray = resultArraySave
         }
     }
     

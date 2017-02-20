@@ -73,7 +73,7 @@ class TableController: UIViewController,UITableViewDelegate,UITableViewDataSourc
         cell.textLabel?.text = dict.name
          let stringModified  = String(describing: file?.clientModified)
         
-        if (stringFormat.isEmpty != false){
+        if (stringModified != "nil"){
             
             cell.detailTextLabel?.text = stringFormat + " modified - " + stringModified //"\(file?.clientModified)"
         }
@@ -99,12 +99,9 @@ class TableController: UIViewController,UITableViewDelegate,UITableViewDataSourc
                 print(result)
                 
                 self.resultArraySave = result.entries
-                if result.entries.count != 0
-                {
-                    
+
                     self.performSegue(withIdentifier: "SegueToFolder2", sender: self)
-                    
-                }
+
             }
         }
         

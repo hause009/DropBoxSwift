@@ -170,7 +170,7 @@
                   moduleName = "DropBoxSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alministrator/Documents/xcode/DropBoxSwift/DropBoxSwift/File.swift"
-                  timestampString = "509318918.161552"
+                  timestampString = "509322012.974638"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -185,7 +185,7 @@
                   moduleName = "DropBoxSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alministrator/Documents/xcode/DropBoxSwift/DropBoxSwift/File.swift"
-                  timestampString = "509318918.163664"
+                  timestampString = "509322012.977701"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "18"
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DropBoxSwift/FolderController.swift"
-            timestampString = "509315332.255175"
+            timestampString = "509319752.469258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DropBoxSwift/FolderController.swift"
-            timestampString = "509315332.255175"
+            timestampString = "509320212.3236"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "119"
+            endingLineNumber = "119"
             landmarkName = "prepare(for:sender:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DropBoxSwift/FolderController.swift"
-            timestampString = "509315332.255175"
+            timestampString = "509319752.469258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
             landmarkName = "tableView(_:didSelectRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -358,7 +358,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DropBoxSwift/TableController.swift"
@@ -378,11 +378,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DropBoxSwift/TableController.swift"
-            timestampString = "509318912.804417"
+            timestampString = "509320153.600684"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "78"
-            endingLineNumber = "78"
+            startingLineNumber = "76"
+            endingLineNumber = "76"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -390,7 +390,7 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "DropBoxSwift/TableController.swift"
@@ -403,14 +403,14 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "DropBoxSwift.TableController.tableView (__ObjC.UITableView, didSelectRowAt : Foundation.IndexPath) -&gt; ()"
                   moduleName = "DropBoxSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alministrator/Documents/xcode/DropBoxSwift/DropBoxSwift/TableController.swift"
-                  timestampString = "509318918.196198"
+                  timestampString = "509320079.167544"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "97"
@@ -418,14 +418,14 @@
                   offsetFromSymbolStart = "712">
                </Location>
                <Location
-                  shouldBeEnabled = "Yes"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
                   symbolName = "DropBoxSwift.TableController.(tableView (__ObjC.UITableView, didSelectRowAt : Foundation.IndexPath) -&gt; ()).(closure #1)"
                   moduleName = "DropBoxSwift"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/alministrator/Documents/xcode/DropBoxSwift/DropBoxSwift/TableController.swift"
-                  timestampString = "509318918.199134"
+                  timestampString = "509320079.170852"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "98"
@@ -447,6 +447,54 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
             endingLineNumber = "70"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DropBoxSwift/TableController.swift"
+            timestampString = "509320591.048302"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "78"
+            endingLineNumber = "78"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DropBoxSwift/TableController.swift"
+            timestampString = "509320591.964543"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "DropBoxSwift/TableController.swift"
+            timestampString = "509320837.89542"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
